@@ -1,0 +1,28 @@
+/*
+ * File:   newmain.c
+ * Author: AJAY
+ *
+ * Created on 15 December, 2018, 4:46 PM
+ */
+
+
+#include <xc.h>
+int value = 0;
+int Count = 0;
+void main (void)
+{
+T1CON = 0b00110001;
+TRISD1=0x00; 
+
+while (1)
+{
+while (! TMR1IF);
+TMR1IF = 0;
+Count ++;
+if (Count>7)
+{
+RD1 = ~ RD1;   
+Count = 0;
+}
+}
+} 

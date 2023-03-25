@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\TIMER0_BLOCKING_DELAY_COUNT.X.production.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>8192</length>
+      <used>1425</used>
+      <free>6767</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>368</length>
+      <used>60</used>
+      <free>308</free>
+    </memory>
+  </executable>
+</project>
