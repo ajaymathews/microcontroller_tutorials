@@ -1,0 +1,286 @@
+
+recieve_transmit_string.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000c  00800100  0000018a  000001fe  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000018a  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000020a  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000023c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000040  00000000  00000000  0000027c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000007f7  00000000  00000000  000002bc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000006f8  00000000  00000000  00000ab3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002d1  00000000  00000000  000011ab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000094  00000000  00000000  0000147c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003ef  00000000  00000000  00001510  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000199  00000000  00000000  000018ff  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00001a98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   8:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  10:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  14:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  18:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  1c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  20:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  24:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  28:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  2c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  30:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  34:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  38:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  3c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  40:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  44:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  48:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  4c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  50:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  54:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  58:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  5c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  60:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+  64:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	ea e8       	ldi	r30, 0x8A	; 138
+  7c:	f1 e0       	ldi	r31, 0x01	; 1
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	ac 30       	cpi	r26, 0x0C	; 12
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+  8a:	0e 94 85 00 	call	0x10a	; 0x10a <main>
+  8e:	0c 94 c3 00 	jmp	0x186	; 0x186 <_exit>
+
+00000092 <__bad_interrupt>:
+  92:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000096 <recieve_setup>:
+
+//char c; // needed bcz without it only 1 commnd be executed,ie1st cmmnd is identified only 
+
+void recieve_setup()
+{
+	UBRR0=NORMAL_BAUD;//SETTING BAUD RATE       
+  96:	83 e3       	ldi	r24, 0x33	; 51
+  98:	90 e0       	ldi	r25, 0x00	; 0
+  9a:	90 93 c5 00 	sts	0x00C5, r25	; 0x8000c5 <__TEXT_REGION_LENGTH__+0x7e00c5>
+  9e:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
+	UCSR0B=(1<<RXEN0)|(1<<TXEN0);//Enables reception and transmission to replay //corrspndg reg value :0x10
+  a2:	88 e1       	ldi	r24, 0x18	; 24
+  a4:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
+	UCSR0C=((1<<UCSZ00)|(1<<UCSZ01));// enables 8 bit transmission/reception   //corrspndg reg value :0x06
+  a8:	86 e0       	ldi	r24, 0x06	; 6
+  aa:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7e00c2>
+  ae:	08 95       	ret
+
+000000b0 <char_recieve>:
+}
+char char_recieve()
+{
+	char c;
+	while (!(UCSR0A & 1<<RXC0));//WAIT FOR DATA TO BE RECIVED,ie while(!(1)); if data recived, 
+  b0:	e0 ec       	ldi	r30, 0xC0	; 192
+  b2:	f0 e0       	ldi	r31, 0x00	; 0
+  b4:	80 81       	ld	r24, Z
+  b6:	88 23       	and	r24, r24
+  b8:	ec f7       	brge	.-6      	; 0xb4 <char_recieve+0x4>
+		c=UDR0;
+  ba:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+		return c;
+}
+  be:	08 95       	ret
+
+000000c0 <string_recieve>:
+char *string_recieve(char string_data[]) //recievs the array from main as array
+{
+  c0:	ef 92       	push	r14
+  c2:	ff 92       	push	r15
+  c4:	0f 93       	push	r16
+  c6:	1f 93       	push	r17
+  c8:	cf 93       	push	r28
+  ca:	df 93       	push	r29
+  cc:	e8 2e       	mov	r14, r24
+  ce:	f9 2e       	mov	r15, r25
+  d0:	c8 2f       	mov	r28, r24
+  d2:	d9 2f       	mov	r29, r25
+	//char string_data[100];
+	int i=-1; //it is set to -1 , bcz initially i++ is executed for do while working.
+	do
+	{
+		i++;
+		string_data[i]=char_recieve(); //charctr is recivd to string_data each by each.
+  d4:	0e 94 58 00 	call	0xb0	; 0xb0 <char_recieve>
+  d8:	88 83       	st	Y, r24
+		if(string_data[i]=='\r')  //'\r is the checking condition for new line
+  da:	8d 30       	cpi	r24, 0x0D	; 13
+  dc:	11 f4       	brne	.+4      	; 0xe2 <string_recieve+0x22>
+		{
+			string_data[i]='\0';   //assign last letter as \0 to exit reception
+  de:	18 82       	st	Y, r1
+  e0:	03 c0       	rjmp	.+6      	; 0xe8 <string_recieve+0x28>
+  e2:	21 96       	adiw	r28, 0x01	; 1
+			//break;            //will work without this break because the while in do while exit whn '\0' comes 
+		}
+		
+	}while(string_data[i]!='\0');  //is the checking condition for ending of a string
+  e4:	81 11       	cpse	r24, r1
+  e6:	f6 cf       	rjmp	.-20     	; 0xd4 <string_recieve+0x14>
+
+	return (string_data);
+}
+  e8:	8e 2d       	mov	r24, r14
+  ea:	9f 2d       	mov	r25, r15
+  ec:	df 91       	pop	r29
+  ee:	cf 91       	pop	r28
+  f0:	1f 91       	pop	r17
+  f2:	0f 91       	pop	r16
+  f4:	ff 90       	pop	r15
+  f6:	ef 90       	pop	r14
+  f8:	08 95       	ret
+
+000000fa <send_char>:
+void send_char(char data_char)
+{
+	UDR0=data_char;
+  fa:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+	//while(!(UCSR0A&1<<TXC0)); // ths doesnt seem to work as expected, only executes one iteration of loop correctly, thus reccmntd not use this
+	while(!(UCSR0A&1<<UDRE0));	//wait for the data registr to empty.
+  fe:	e0 ec       	ldi	r30, 0xC0	; 192
+ 100:	f0 e0       	ldi	r31, 0x00	; 0
+ 102:	80 81       	ld	r24, Z
+ 104:	85 ff       	sbrs	r24, 5
+ 106:	fd cf       	rjmp	.-6      	; 0x102 <send_char+0x8>
+	
+}
+ 108:	08 95       	ret
+
+0000010a <main>:
+int main(void)
+{
+ 10a:	cf 93       	push	r28
+ 10c:	df 93       	push	r29
+ 10e:	cd b7       	in	r28, 0x3d	; 61
+ 110:	de b7       	in	r29, 0x3e	; 62
+ 112:	cf 56       	subi	r28, 0x6F	; 111
+ 114:	d1 09       	sbc	r29, r1
+ 116:	0f b6       	in	r0, 0x3f	; 63
+ 118:	f8 94       	cli
+ 11a:	de bf       	out	0x3e, r29	; 62
+ 11c:	0f be       	out	0x3f, r0	; 63
+ 11e:	cd bf       	out	0x3d, r28	; 61
+	char string_data[100]; //the array that stores recieved data
+							//must be declared in main, bcz reception function cant seem to retrn the pointer of this array when arry is not passed to rcv fnctn
+	char *data_string;     //only needd in the cases that are cmmntd below
+	char recv_msg[]="Received: "; //just a msg to repsnt data
+ 120:	8b e0       	ldi	r24, 0x0B	; 11
+ 122:	e0 e0       	ldi	r30, 0x00	; 0
+ 124:	f1 e0       	ldi	r31, 0x01	; 1
+ 126:	de 01       	movw	r26, r28
+ 128:	ab 59       	subi	r26, 0x9B	; 155
+ 12a:	bf 4f       	sbci	r27, 0xFF	; 255
+ 12c:	01 90       	ld	r0, Z+
+ 12e:	0d 92       	st	X+, r0
+ 130:	8a 95       	dec	r24
+ 132:	e1 f7       	brne	.-8      	; 0x12c <main+0x22>
+	DDRC=0x01;  // C PORT IS USED FOR OUTPUT BCZ THE PINS THAT THE CRYSTAL OSCILLTOR GETS CONNECED TO
+ 134:	81 e0       	ldi	r24, 0x01	; 1
+ 136:	87 b9       	out	0x07, r24	; 7
+				// SHOULDNT BE A AN OUTPUT, WE CAN STILL USE B PORT AS AN OUTPUT IF ONLY THE LED PORT IS SET AS INPUT :PORTB=1<<PORTB0
+	PORTC=0x00;
+ 138:	18 b8       	out	0x08, r1	; 8
+	recieve_setup();
+ 13a:	0e 94 4b 00 	call	0x96	; 0x96 <recieve_setup>
+    while (1)
+	{ 
+			
+		string_recieve(string_data);
+ 13e:	ce 01       	movw	r24, r28
+ 140:	01 96       	adiw	r24, 0x01	; 1
+ 142:	0e 94 60 00 	call	0xc0	; 0xc0 <string_recieve>
+		for(int i=0;recv_msg[i]!='\0';i++)  //this method works bcz the data is stored in string data array that is passd to fn to recive data.
+ 146:	a6 96       	adiw	r28, 0x26	; 38
+ 148:	8f ad       	ldd	r24, Y+63	; 0x3f
+ 14a:	a6 97       	sbiw	r28, 0x26	; 38
+ 14c:	88 23       	and	r24, r24
+ 14e:	69 f0       	breq	.+26     	; 0x16a <main+0x60>
+ 150:	05 e6       	ldi	r16, 0x65	; 101
+ 152:	10 e0       	ldi	r17, 0x00	; 0
+ 154:	0c 0f       	add	r16, r28
+ 156:	1d 1f       	adc	r17, r29
+ 158:	0f 5f       	subi	r16, 0xFF	; 255
+ 15a:	1f 4f       	sbci	r17, 0xFF	; 255
+		{										//thus transmitting that array also prints the data
+			send_char(recv_msg[i]);
+ 15c:	0e 94 7d 00 	call	0xfa	; 0xfa <send_char>
+	recieve_setup();
+    while (1)
+	{ 
+			
+		string_recieve(string_data);
+		for(int i=0;recv_msg[i]!='\0';i++)  //this method works bcz the data is stored in string data array that is passd to fn to recive data.
+ 160:	f8 01       	movw	r30, r16
+ 162:	81 91       	ld	r24, Z+
+ 164:	8f 01       	movw	r16, r30
+ 166:	81 11       	cpse	r24, r1
+ 168:	f9 cf       	rjmp	.-14     	; 0x15c <main+0x52>
+		{										//thus transmitting that array also prints the data
+			send_char(recv_msg[i]);
+		}
+		for(int i=0;string_data[i]!='\0';i++)  //this method works bcz the data is stored in string data array that is passd to fn to recive data.
+ 16a:	89 81       	ldd	r24, Y+1	; 0x01
+ 16c:	88 23       	and	r24, r24
+ 16e:	39 f3       	breq	.-50     	; 0x13e <main+0x34>
+ 170:	8e 01       	movw	r16, r28
+ 172:	0e 5f       	subi	r16, 0xFE	; 254
+ 174:	1f 4f       	sbci	r17, 0xFF	; 255
+		{										//thus transmitting that array also prints the data
+		send_char(string_data[i]);
+ 176:	0e 94 7d 00 	call	0xfa	; 0xfa <send_char>
+		string_recieve(string_data);
+		for(int i=0;recv_msg[i]!='\0';i++)  //this method works bcz the data is stored in string data array that is passd to fn to recive data.
+		{										//thus transmitting that array also prints the data
+			send_char(recv_msg[i]);
+		}
+		for(int i=0;string_data[i]!='\0';i++)  //this method works bcz the data is stored in string data array that is passd to fn to recive data.
+ 17a:	f8 01       	movw	r30, r16
+ 17c:	81 91       	ld	r24, Z+
+ 17e:	8f 01       	movw	r16, r30
+ 180:	81 11       	cpse	r24, r1
+ 182:	f9 cf       	rjmp	.-14     	; 0x176 <main+0x6c>
+ 184:	dc cf       	rjmp	.-72     	; 0x13e <main+0x34>
+
+00000186 <_exit>:
+ 186:	f8 94       	cli
+
+00000188 <__stop_program>:
+ 188:	ff cf       	rjmp	.-2      	; 0x188 <__stop_program>
