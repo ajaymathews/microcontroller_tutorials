@@ -1,0 +1,2 @@
+extern count=2;
+
