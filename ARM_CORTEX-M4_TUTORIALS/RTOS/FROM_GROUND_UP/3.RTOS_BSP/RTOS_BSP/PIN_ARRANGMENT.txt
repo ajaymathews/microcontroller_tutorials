@@ -1,0 +1,17 @@
+/********** DISCOVERY PIN ASSIGNMENT ************/
+
+PROBE:
+PROBE0 	: PC0
+PROBE1 	: PC1
+PROBE2 	: PC2
+PROBE3 	: PC3
+
+ADC	   	: PA4
+
+GLCD-ST7735
+
+SCK    	:  PB13
+MOSI/SDA:  PB15
+RS		:  PB14
+DC		:  PB12
+CS		:  PB10
