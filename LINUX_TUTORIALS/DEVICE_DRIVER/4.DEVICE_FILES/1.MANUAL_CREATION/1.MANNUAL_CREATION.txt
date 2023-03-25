@@ -1,0 +1,7 @@
+To Create a device file manually,
+
+1)We need to create a min/maj number for the module as in the previous folder, because only after finding out the min/maj number, we can create 
+  a device file that has the same min/maj number.Then only when the device file recieves some data , it can pass that data to device driver
+  and inturns pass tht data to device hardware.
+2)type 'sudo mknod -m 777 /dev/sample_device c maj_num min_num '
+thus the file is created with corresponding min/maj numbers.s
