@@ -1,0 +1,87 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ÂµVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ajay Mathews, student, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+D:\Study\RAPID\PROGRAMS\ARM\MY_CODES\MY_STM32\TouchGFXProjects\BLINK_TFT_BUTTON\MyApplication\MDK-ARM\STM32F429I-DISCO.uvprojx
+Project File Date:  12/09/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
+  
+Build target 'STM32F429I-DISCO'
+compiling TouchGFXHAL.cpp...
+../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp(20): error:  #5: cannot open source input file "touchgfx/hal/HAL.hpp": No such file or directory
+  #include <touchgfx/hal/HAL.hpp>
+../TouchGFX/target/TouchGFXHAL.cpp: 0 warnings, 1 error
+compiling TouchGFXGPIO.cpp...
+../TouchGFX/target/TouchGFXGPIO.cpp(18): error:  #5: cannot open source input file "touchgfx/hal/GPIO.hpp": No such file or directory
+  #include <touchgfx/hal/GPIO.hpp>
+../TouchGFX/target/TouchGFXGPIO.cpp: 0 warnings, 1 error
+compiling OSWrappers.cpp...
+../TouchGFX/target/generated/OSWrappers.cpp(17): error:  #5: cannot open source input file "touchgfx/hal/OSWrappers.hpp": No such file or directory
+  #include <touchgfx/hal/OSWrappers.hpp>
+../TouchGFX/target/generated/OSWrappers.cpp: 0 warnings, 1 error
+compiling TouchGFXGeneratedHAL.cpp...
+../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp(20): error:  #5: cannot open source input file "touchgfx/hal/HAL.hpp": No such file or directory
+  #include <touchgfx/hal/HAL.hpp>
+../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp: 0 warnings, 1 error
+compiling TouchGFXConfiguration.cpp...
+../TouchGFX/target/generated/TouchGFXConfiguration.cpp(17): error:  #5: cannot open source input file "texts/TypedTextDatabase.hpp": No such file or directory
+  #include <texts/TypedTextDatabase.hpp>
+../TouchGFX/target/generated/TouchGFXConfiguration.cpp: 0 warnings, 1 error
+compiling STM32TouchController.cpp...
+../TouchGFX/target/STM32TouchController.hpp(23): error:  #5: cannot open source input file "platform/driver/touch/TouchController.hpp": No such file or directory
+  #include <platform/driver/touch/TouchController.hpp>
+../TouchGFX/target/STM32TouchController.cpp: 0 warnings, 1 error
+compiling STM32DMA.cpp...
+../TouchGFX/target/generated/STM32DMA.cpp(20): error:  #5: cannot open source input file "touchgfx/hal/OSWrappers.hpp": No such file or directory
+  #include <touchgfx/hal/OSWrappers.hpp>
+../TouchGFX/target/generated/STM32DMA.cpp: 0 warnings, 1 error
+"STM32F429I-DISCO\STM32F429I-DISCO.axf" - 7 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32F429I-DISCO
+  D:\Installation_files\keil\armpacks\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\Installation_files\keil\armpacks\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
