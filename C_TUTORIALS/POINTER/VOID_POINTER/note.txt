@@ -1,1 +1,0 @@
-malloc returns the adress of the data as a pointer in type of void, then only it cant be assigned irrespective of char array and int array.
