@@ -1,6 +1,6 @@
 /*
  * File:   newmain.c
- * Author: AJAY
+ * Author: [Developer]
  *
  * Created on 23 October, 2019, 9:19 AM
  */
@@ -13,7 +13,8 @@ void uart_init()
 {
 	TXSTA=0x24;//0b0010,0100
 	RCSTA=0x90;
-	SPBRG=103;
+	// Standard 9600 baud rate calculation for 16MHz
+	SPBRG = ((_XTAL_FREQ / 64) / 9600) - 1; 
 }
 char receive()
 {

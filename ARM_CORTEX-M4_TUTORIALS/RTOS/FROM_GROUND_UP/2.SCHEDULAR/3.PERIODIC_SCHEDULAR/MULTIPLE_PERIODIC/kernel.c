@@ -3,8 +3,8 @@
 #include "kernel.h"
 #include "stm32f4xx.h"                  // Device header
 
-#define syspri3 (*((volatile uint32_t *)0xE000ED20)) //ADRESS OF PRIORITY REGITER(ON ALL CORTEX), TO SET PRIORITY OF SYSTICK
-#define intctrl (*((volatile uint32_t *)0xE000ED04)) //ADRESS OF NTERRUPT CONTROL REGITER(ON ALL CORTEX),WRITING ONE TO 26TH BIT OF REG,INTERRUPT IS REQUESTED
+#define syspri3 (*((volatile uint32_t *)0xE000ED20)) //ADDRESS OF PRIORITY REGITER(ON ALL CORTEX), TO SET PRIORITY OF SYSTICK
+#define intctrl (*((volatile uint32_t *)0xE000ED04)) //ADDRESS OF NTERRUPT CONTROL REGITER(ON ALL CORTEX),WRITING ONE TO 26TH BIT OF REG,INTERRUPT IS REQUESTED
 
 #define thread_nums 3                              //DEFINED 3 AS THEAD_NUMS
 #define stack_size 100                             //CONTEXT SIZE
@@ -30,7 +30,7 @@ int32_t tcb_stack[thread_nums][stack_size];        //CREATING 2D ARRAY[3][100] T
 //TO INITIALIZE THE STACK
 void kernelstackinit(int i){                       //FN TO INITIALIZE STACK WITH i AS THE THREAD NUM 0, 1 AND 2	
 	tcbs[i].stackptr = &tcb_stack[i][stack_size-16]; //STACKPOINTER POINTS TO TOP OF STACK OF SAME THREAD
-	tcb_stack[i][stack_size-1]= 0x01000000;          //(1<<24 BIT OF XPSR[STATUS REG] SETS M-CORTEX IN THUMP MODE).
+	tcb_stack[i][stack_size-1]= 0x01000000;          //(1<<24 BIT OF XPSR[STATUS REG] SETS M-CORTEX IN THUMB MODE).
 	//REG(R0,R1,R2,R3,R12,[R14]LR,[R15]PC,xPSR)[ORDER AS FROM LOW TO HIGH] , THUS STACK-1 SETS THE XPSR RG	
 }
 

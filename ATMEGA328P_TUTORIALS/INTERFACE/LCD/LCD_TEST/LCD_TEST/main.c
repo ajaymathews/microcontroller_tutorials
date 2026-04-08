@@ -2,7 +2,7 @@
  * LCD_TEST.c
  *
  * Created: 02-08-2019 10:59:08
- * Author : AJAY
+ * Author : [Developer]
  PORTD &= ~(1 << n); // Pin n goes low
  PORTD |= (1 << n); // Pin n goes high
  

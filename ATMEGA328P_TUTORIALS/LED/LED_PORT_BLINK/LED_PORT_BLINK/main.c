@@ -2,7 +2,7 @@
  * GccApplication3.c
  *
  * Created: 29-05-2019 11:06:37
- * Author : AJAY
+ * Author : [Developer]
  */ 
 
 #include <avr/io.h>

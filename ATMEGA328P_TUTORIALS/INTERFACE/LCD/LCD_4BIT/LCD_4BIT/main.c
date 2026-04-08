@@ -2,7 +2,7 @@
  * LCD_4BIT.c
  *
  * Created: 02-08-2019 15:19:56
- * Author : AJAY
+ * Author : [Developer]
  */ 
 
 #include <avr/io.h>

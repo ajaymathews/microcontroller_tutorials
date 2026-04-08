@@ -2,7 +2,7 @@
  * Timer1_reg_count_intrrupt.c
  *
  * Created: 02-06-2019 16:46:17
- * Author : AJAY
+ * Author : [Developer]
  */ 
 //non blocking delay, as by the interrupt feature
 #include <avr/io.h>

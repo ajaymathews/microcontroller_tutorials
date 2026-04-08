@@ -2,7 +2,7 @@
  * PWM_jimshi_test.c
  *
  * Created: 03-06-2019 16:32:59
- * Author : AJAY
+ * Author : [Developer]
  */ 
 
 #include <avr/io.h>

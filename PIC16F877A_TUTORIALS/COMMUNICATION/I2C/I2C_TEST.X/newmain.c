@@ -1,6 +1,6 @@
 /*
  * File:   newmain.c
- * Author: AJAY
+ * Author: [Developer]
  *
  * Created on 11 November, 2019, 9:39 PM
  */
@@ -20,7 +20,7 @@ when SPSR recieves full byte,transfers to SSPBUFF and INTERRUPT is set.
      =0:SRC enabled for 400khz(high speed mode)
  6-CKE=1/0:Enable/Disble SMBus inputs
  5-D/A(slave mode)=1:last byte recieved/transmited
-                   0:last byte recieved/tansmitted is adress
+                   0:last byte recieved/tansmitted is ADDRESS
  4-P:stop bit (indication) 1:detected
                            0:not detected
  3-S:start bit =1:detected
@@ -66,13 +66,13 @@ when SPSR recieves full byte,transfers to SSPBUFF and INTERRUPT is set.
  In I2C communication (master mode), data is send by byte by byte
  * that is letter by lettr in case of character, for the mater sending the data
  * the communication is strts by sending start bit
- *and the sending the adresss of the the slave the adress is a 7 bit adress and 
- * since the data is 8 bit, the last bit is R(1)/W(0) thus the adress should be end with zero at last
- * for eg: 0x30, and,along with adress that we send thee data too,
+ *and the sending the ADDRESSs of the the slave the ADDRESS is a 7 bit ADDRESS and 
+ * since the data is 8 bit, the last bit is R(1)/W(0) thus the ADDRESS should be end with zero at last
+ * for eg: 0x30, and,along with ADDRESS that we send thee data too,
  * and at the end of the data transfer which is a byte, the stop bit is seted.
  * 
  * (slave mode)
- * the data passed to the slave is read as adress, bcz it contains the adress as the
+ * the data passed to the slave is read as ADDRESS, bcz it contains the ADDRESS as the
  * preterm of the data.thus using the checking the condition of D_nA(instead of DA in datasheet)
  * as zero, the sspbuf contains the address along with the data and we store this data in another variable
  * so that after that there comes the data.that data is recieved and transmitted to uart.
@@ -146,7 +146,7 @@ void I2C_str(char *strings)
 	strings++;  
 	__delay_ms(100);
 }
-    /*DATA:AJAY
+    /*DATA:[Developer]
  * : start_bit -> adrsss+R/W -> 'A' -> stop_bit 
      start_bit -> adrsss+R/W -> 'J' -> stop_bit 
      start_bit -> adrsss+R/W -> 'A' -> stop_bit 
@@ -181,7 +181,7 @@ char I2C_slave_recieve()
     if(SSPIF==1)//when a data recieves to the i2c pins, the SSPIF flag is set,
     {          //and thusit can be used for checking
     
-        CKP=0; //holds the clock low, for the data and adress to recieve
+        CKP=0; //holds the clock low, for the data and ADDRESS to recieve
         if(!D_nA)
         {
             addrs_letter=SSPBUF;//stores the adrsss recieved to this variable

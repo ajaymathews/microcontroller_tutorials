@@ -1,6 +1,6 @@
 /*
  * File:   main.c
- * Author: AJAY
+ * Author: [Developer]
  *
  * Created on 20 October, 2018, 12:19 PM
  */

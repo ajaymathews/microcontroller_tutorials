@@ -2,7 +2,7 @@
  * Recieve.c
  *
  * Created: 15-06-2019 11:11:07
- * Author : AJAY
+ * Author : [Developer]
  
  ucsr0a->RXC0 will be 1 at reception is complete
   ucsr0a->udre0 will be one if the buffer is ready to write new data.

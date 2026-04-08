@@ -2,7 +2,7 @@
  * PWM_timer0.c
  *
  * Created: 02-06-2019 22:37:28
- * Author : AJAY
+ * Author : [Developer]
  */ 
 #include <avr/io.h>
 #include <avr/interrupt.h>

@@ -2,7 +2,7 @@
  * SPI_TEST.c
  *
  * Created: 27-06-2019 12:48:43
- * Author : AJAY
+ * Author : [Developer]
 SPI IS FASTER(TWICE) THAN I2C, AND THE NO COOMPLEX ARSSING LIKE IN I2C. 
  
  master:

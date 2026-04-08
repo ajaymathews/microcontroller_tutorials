@@ -2,7 +2,7 @@
  * LCD_8BIT.c
  *
  * Created: 02-08-2019 15:21:25
- * Author : AJAY
+ * Author : [Developer]
  */ 
 
 #include <avr/io.h>

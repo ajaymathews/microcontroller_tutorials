@@ -2,14 +2,14 @@
  * spi_slave_to_master.c
  *
  * Created: 04-09-2019 14:14:02
- * Author : AJAY
+ * Author : [Developer]
  */ 
 
 /*
  * SPI_TEST.c
  *
  * Created: 27-06-2019 12:48:43
- * Author : AJAY
+ * Author : [Developer]
  
  
  master:

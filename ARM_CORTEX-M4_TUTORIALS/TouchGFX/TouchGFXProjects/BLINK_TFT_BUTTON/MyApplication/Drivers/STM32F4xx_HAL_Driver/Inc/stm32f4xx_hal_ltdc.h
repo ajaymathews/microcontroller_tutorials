@@ -138,7 +138,7 @@ typedef struct
   uint32_t BlendingFactor2;            /*!< Select the blending factor 2.
                                             This parameter can be one of value of @ref LTDC_BlendingFactor2 */
 
-  uint32_t FBStartAdress;              /*!< Configures the color frame buffer address */
+  uint32_t FBStartADDRESS;              /*!< Configures the color frame buffer address */
 
   uint32_t ImageWidth;                 /*!< Configures the color frame buffer line length.
                                             This parameter must be a number between Min_Data = 0x0000 and Max_Data = 0x1FFF. */

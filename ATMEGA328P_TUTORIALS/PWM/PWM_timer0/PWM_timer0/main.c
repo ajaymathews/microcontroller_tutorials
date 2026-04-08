@@ -2,7 +2,7 @@
  * PWM_timer0.c
  *
  * Created: 02-06-2019 22:37:28
- * Author : AJAY
+ * Author : [Developer]
  */ 
 #define F_CPU  16000000L 
 #include <avr/io.h>

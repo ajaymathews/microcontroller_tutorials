@@ -2,7 +2,7 @@
  * PWM_CONTRL_USING_ADC_POT.c
  *
  * Created: 05-06-2019 16:54:37
- * Author : AJAY
+ * Author : [Developer]
  
   ADCSRA->ADEN:1 //ADC TURNING  ON/OFF
   ADSRA->ADIE:1//TURN ADC INTERRPT ON

@@ -56,7 +56,7 @@ __asm void SVC_Handler(void)
 void SVC_Handler_C(unsigned int * svc_args)  //THIS ARGS IS AN ARRAY OF ARGUMENTS THAT CONTAINS THE 
 {	                                           //REGISTER VALUES FROM R0 TO R15 AS MENTIONED ABOVE
 unsigned int svc_number;
-	svc_number =((char*)svc_args[6])[-2];   //PROGRAM COUNTER HOLDS THE ADRESS TO BE EXECUTED,IN THIS CASE IT IS THE SVC SERVICE,
+	svc_number =((char*)svc_args[6])[-2];   //PROGRAM COUNTER HOLDS THE ADDRESS TO BE EXECUTED,IN THIS CASE IT IS THE SVC SERVICE,
 	                                       //-2 TO GET THE FIRST BYTE,WHICH REPRESENTS THE SVC NUMBER FROM SVC SERVICE
 	
 	switch(svc_number)

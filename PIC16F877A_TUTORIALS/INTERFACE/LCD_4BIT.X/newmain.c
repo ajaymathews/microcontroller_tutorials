@@ -1,6 +1,6 @@
 /*
  * File:   newmain.c
- * Author: AJAY
+ * Author: [Developer]
  *
  * Created on 1 January, 2020, 10:07 AM
  */

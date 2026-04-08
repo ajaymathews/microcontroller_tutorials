@@ -1,7 +1,7 @@
 /*
 
  * File:   newmain.c
- * Author: AJAY
+ * Author: [Developer]
  *
  * Created on 30 October, 2019, 3:50 PM
  */

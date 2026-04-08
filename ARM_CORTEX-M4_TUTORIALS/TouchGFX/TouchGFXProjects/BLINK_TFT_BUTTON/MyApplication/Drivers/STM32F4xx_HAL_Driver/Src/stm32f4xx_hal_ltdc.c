@@ -1327,7 +1327,7 @@ HAL_StatusTypeDef HAL_LTDC_SetAddress(LTDC_HandleTypeDef *hltdc, uint32_t Addres
   pLayerCfg = &hltdc->LayerCfg[LayerIdx];
 
   /* Reconfigure the Address */
-  pLayerCfg->FBStartAdress = Address;
+  pLayerCfg->FBStartADDRESS = Address;
 
   /* Set LTDC parameters */
   LTDC_SetConfig(hltdc, pLayerCfg, LayerIdx);
@@ -1759,7 +1759,7 @@ HAL_StatusTypeDef HAL_LTDC_SetAddress_NoReload(LTDC_HandleTypeDef *hltdc, uint32
   pLayerCfg = &hltdc->LayerCfg[LayerIdx];
 
   /* Reconfigure the Address */
-  pLayerCfg->FBStartAdress = Address;
+  pLayerCfg->FBStartADDRESS = Address;
 
   /* Set LTDC parameters */
   LTDC_SetConfig(hltdc, pLayerCfg, LayerIdx);
@@ -2110,7 +2110,7 @@ static void LTDC_SetConfig(LTDC_HandleTypeDef *hltdc, LTDC_LayerCfgTypeDef *pLay
 
   /* Configure the color frame buffer start address */
   LTDC_LAYER(hltdc, LayerIdx)->CFBAR &= ~(LTDC_LxCFBAR_CFBADD);
-  LTDC_LAYER(hltdc, LayerIdx)->CFBAR = (pLayerCfg->FBStartAdress);
+  LTDC_LAYER(hltdc, LayerIdx)->CFBAR = (pLayerCfg->FBStartADDRESS);
 
   if (pLayerCfg->PixelFormat == LTDC_PIXEL_FORMAT_ARGB8888)
   {

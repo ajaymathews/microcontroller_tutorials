@@ -2,7 +2,7 @@
  * Transmission string.c
  *
  * Created: 09-06-2019 16:21:48
- * Author : AJAY
+ * Author : [Developer]
  
 
 
@@ -45,7 +45,7 @@ UCSRnA contains certain flags for the operation.(no need until checking)
 #define F_CPU 8000000L
 #define BAUD  9600
 #define NORMAL_BAUD  ((F_CPU/16/BAUD)-1) //for normal mode asynchronus operation
-char buffer[]="hello my name is ajay";
+char buffer[]="hello my name is [Developer]";
 int leng,i=0;
 char *buffer_ptr=buffer;
 

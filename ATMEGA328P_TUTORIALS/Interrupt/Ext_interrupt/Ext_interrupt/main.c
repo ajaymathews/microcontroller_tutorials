@@ -2,7 +2,7 @@
  * Ext_interrupt.c
  *
  * Created: 06-06-2019 16:03:10
- * Author : AJAY
+ * Author : [Developer]
  
  
  EICRA->ISC10:1, ANY LOGICAL  CHANGE IN INT1 PIN GENERTE INTERRUPT

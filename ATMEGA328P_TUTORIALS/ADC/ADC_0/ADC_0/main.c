@@ -2,7 +2,7 @@
  * ADC_0.c
  *
  * Created: 04-06-2019 00:11:59
- * Author : AJAY
+ * Author : [Developer]
  
  
  ADCSRA->ADEN:1 //ADC TURNING  ON/OFF

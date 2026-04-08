@@ -2,7 +2,7 @@
  * Interrupt_1.c
  *
  * Created: 31-05-2019 15:06:00
- * Author : AJAY
+ * Author : [Developer]
  
 note: do not write the ocr value and the starting value of tcnto be same or below.
       or do not write ocr value when tcnt0 is running that may result in the timer to skip the comparison
